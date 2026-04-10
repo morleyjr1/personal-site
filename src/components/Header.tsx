@@ -36,11 +36,11 @@ export default function Header() {
             <span className="font-bold text-xl text-text-primary group-hover:text-pop-purple transition-colors block leading-tight">
               Dr Jessica Morley
             </span>
-            <div className="flex items-center gap-1 mt-0.5">
+            <div className="flex items-center gap-1.5 mt-1">
               {MINI_BRACELET_COLORS.map((color, i) => (
                 <span
                   key={i}
-                  className={`inline-block w-1.5 h-1.5 rounded-full mini-dot ${color}`}
+                  className={`inline-block w-2 h-2 rounded-full mini-dot ${color}`}
                   style={{ animationDelay: `${i * 0.15}s` }}
                 />
               ))}
