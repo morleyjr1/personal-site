@@ -172,7 +172,7 @@ export default function CV() {
           <img
             src="/images/desk-with-books.png"
             alt="At the desk"
-            className="hidden md:block w-40 h-40 rounded-2xl shadow-md shrink-0"
+            className="hidden md:block w-40 rounded-2xl shadow-md shrink-0"
           />
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">

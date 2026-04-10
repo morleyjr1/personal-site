@@ -4,6 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const MINI_BRACELET_COLORS = [
+  "bg-pop-pink",
+  "bg-pop-purple",
+  "bg-pop-blue",
+  "bg-pop-green",
+  "bg-pop-yellow",
+  "bg-pop-coral",
+  "bg-pop-pink",
+];
+
 const NAV_ITEMS = [
   { href: "/", label: "Home", color: "bg-pop-pink text-white" },
   { href: "/about", label: "About", color: "bg-pop-purple text-white" },
@@ -22,9 +32,20 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="group flex items-center gap-2">
           <span className="text-2xl">✨</span>
-          <span className="font-bold text-xl text-text-primary group-hover:text-pop-purple transition-colors">
-            Dr Jessica Morley
-          </span>
+          <div>
+            <span className="font-bold text-xl text-text-primary group-hover:text-pop-purple transition-colors block leading-tight">
+              Dr Jessica Morley
+            </span>
+            <div className="flex items-center gap-1 mt-0.5">
+              {MINI_BRACELET_COLORS.map((color, i) => (
+                <span
+                  key={i}
+                  className={`inline-block w-1.5 h-1.5 rounded-full mini-dot ${color}`}
+                  style={{ animationDelay: `${i * 0.15}s` }}
+                />
+              ))}
+            </div>
+          </div>
         </Link>
 
         <nav className="hidden md:block">
