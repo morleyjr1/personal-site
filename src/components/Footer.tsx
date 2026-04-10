@@ -63,7 +63,7 @@ export default function Footer() {
               <img
                 src="/images/mug-sparkles.png"
                 alt=""
-                className="w-10 h-10 rounded-lg"
+                className="w-10 rounded-lg"
               />
               <h3 className="font-bold text-text-primary">Connect</h3>
             </div>
