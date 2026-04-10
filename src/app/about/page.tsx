@@ -75,18 +75,18 @@ export default function About() {
       {/* Bio */}
       <section className="py-16 px-4 bg-cream">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Portrait */}
-            <div className="md:col-span-1">
+            <div className="md:col-span-2">
               <img
                 src="/images/portrait.png"
                 alt="Dr Jessica Morley"
-                className="aspect-square rounded-2xl object-cover shadow-lg w-full"
+                className="rounded-2xl shadow-lg w-full"
               />
             </div>
 
             {/* Bio text */}
-            <div className="md:col-span-2 space-y-4 text-text-secondary leading-relaxed">
+            <div className="md:col-span-3 space-y-4 text-text-secondary leading-relaxed">
               <p>
                 I am a de Vries-Sherif Associate Research Scientist at the
                 Digital Ethics Center at Yale University, where I lead an independent research programme

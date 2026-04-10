@@ -44,9 +44,15 @@ export default function Teaching() {
     <div className="page-enter">
       {/* Hero */}
       <section className="bg-pop-yellow/20 py-16 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto flex items-start gap-6">
+          <img
+            src="/images/teaching.png"
+            alt="Teaching"
+            className="hidden md:block w-28 h-28 rounded-2xl object-cover shadow-md shrink-0"
+          />
+          <div>
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            Teaching 🎓
+            Teaching ✦
           </h1>
           <p className="text-lg text-text-secondary max-w-3xl">
             I teach and supervise across digital ethics, health policy, and
@@ -54,6 +60,7 @@ export default function Teaching() {
             challenges into the classroom — because the best way to learn about
             governance is to grapple with its failures.
           </p>
+          </div>
         </div>
       </section>
 
