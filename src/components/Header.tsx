@@ -36,7 +36,7 @@ export default function Header() {
             <span className="font-bold text-xl text-text-primary group-hover:text-pop-purple transition-colors block leading-tight">
               Dr Jessica Morley
             </span>
-            <div className="flex items-center gap-1.5 mt-1">
+            <div className="flex items-center justify-between w-full mt-1">
               {MINI_BRACELET_COLORS.map((color, i) => (
                 <span
                   key={i}
