@@ -5,7 +5,7 @@ const HIGHLIGHT_CARDS = [
     emoji: "📝",
     title: "Latest Research",
     description:
-      "Exploring AI governance in healthcare, digital ethics frameworks, and the sociotechnical dimensions of health data.",
+      "From the inverse data quality law to the translational gap between ethical principles and clinical practice — my research programme sits at the intersection of philosophy, public health, and regulatory science.",
     href: "/publications",
     color: "bg-lavender",
     borderColor: "border-pop-purple/30",
@@ -14,7 +14,7 @@ const HIGHLIGHT_CARDS = [
     emoji: "🎙️",
     title: "Media & Speaking",
     description:
-      "BMJ editorials, podcast appearances, and commentary on digital health policy and AI ethics.",
+      "BMJ editorials, BBC Radio 4, the Financial Times, and the occasional panel where I say what everyone else is thinking about NHS data governance.",
     href: "/media",
     color: "bg-soft-pink",
     borderColor: "border-pop-pink/30",
@@ -23,7 +23,7 @@ const HIGHLIGHT_CARDS = [
     emoji: "🎓",
     title: "Teaching",
     description:
-      "Courses on digital ethics, health policy, and responsible innovation at Yale and beyond.",
+      "My course on thinking critically about AI in health care.",
     href: "/teaching",
     color: "bg-mint",
     borderColor: "border-pop-green/30",
@@ -31,12 +31,14 @@ const HIGHLIGHT_CARDS = [
 ];
 
 const INTEREST_BEADS = [
-  { label: "AI Ethics", color: "bg-pop-purple text-white" },
-  { label: "NHS Digital", color: "bg-pop-blue text-white" },
-  { label: "Health Data", color: "bg-pop-pink text-white" },
+  { label: "AI & Health Policy", color: "bg-pop-purple text-white" },
+  { label: "Digital Health Governance", color: "bg-pop-blue text-white" },
   { label: "Public Health", color: "bg-pop-green text-text-primary" },
-  { label: "Governance", color: "bg-pop-yellow text-text-primary" },
+  { label: "NHS Data Policy", color: "bg-pop-pink text-white" },
   { label: "Bioethics", color: "bg-pop-coral text-white" },
+  { label: "Health Data Science", color: "bg-pop-yellow text-text-primary" },
+  { label: "Causal Inference", color: "bg-pop-blue text-white" },
+  { label: "Regulatory Science", color: "bg-pop-purple text-white" },
 ];
 
 export default function Home() {
@@ -51,10 +53,11 @@ export default function Home() {
             <span className="shimmer-text">Jessica Morley</span>
           </h1>
           <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-8">
-            Digital ethics and health policy researcher at Yale. I work at the
-            intersection of AI ethics, health data governance, and public health
-            — trying to make sure we get the technology right for the people who
-            need it most.
+            I&apos;m an Associate Research Scientist at Yale&apos;s Digital
+            Ethics Center, working on the political philosophy of health AI:
+            what it should be optimising for, why it has been assigned the wrong
+            target, and what it would take to get to the right one. Part
+            philosopher, part policy wonk, part digilante.
           </p>
 
           {/* Research interest beads */}
