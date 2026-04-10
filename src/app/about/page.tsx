@@ -1,13 +1,13 @@
 const TIMELINE = [
   {
-    year: "2025–",
-    role: "Associate Director of Research, Digital Ethics Center, Yale University",
+    year: "2026–",
+    role: "de Vries-Sherif Associate Research Scientist, Digital Ethics Center, Yale University",
     description:
       "Leading an independent research programme on digital health, health data, and AI. Co-organising the Global Health in the Age of AI symposium and the HASTE workshop with MIT.",
     color: "bg-pop-purple",
   },
   {
-    year: "2023–25",
+    year: "2024–25",
     role: "Postdoctoral Research Fellow, Digital Ethics Center, Yale University",
     description:
       "Developed new conceptual frameworks including the 'inverse data quality law.' Selected as Yale's institutional candidate for the NIH Director's Early Independence Award.",
@@ -89,9 +89,8 @@ export default function About() {
             {/* Bio text */}
             <div className="md:col-span-2 space-y-4 text-text-secondary leading-relaxed">
               <p>
-                I am the de Vries-Sherif Associate Research Scientist and
-                Associate Director of Research at the Digital Ethics Center at
-                Yale University, where I lead an independent research programme
+                I am a de Vries-Sherif Associate Research Scientist at the
+                Digital Ethics Center at Yale University, where I lead an independent research programme
                 on digital health, health data, and AI. My research draws on
                 philosophy, public health, health economics, and regulatory
                 science to interrogate dominant narratives about technology in
