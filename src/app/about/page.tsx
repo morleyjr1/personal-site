@@ -152,9 +152,15 @@ export default function About() {
       {/* Three Problems, One Diagnosis */}
       <section className="py-16 px-4 bg-cream">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-text-primary mb-8">
+          <h2 className="text-2xl font-bold text-text-primary mb-4">
             Three Problems, One Diagnosis ✦
           </h2>
+          <p className="text-text-secondary leading-relaxed mb-8">
+            Despite millions being spent on the development, deployment, and use
+            of healthcare AI it is failing to generate a justifiable return on
+            investment at scale. I think this is a systems-level problem
+            resulting from three interconnected issues:
+          </p>
           <div className="space-y-6">
             {/* (a) Target misspecification */}
             <div className="card-pop bg-lavender rounded-2xl p-6 md:p-8 border border-pop-purple/20">
