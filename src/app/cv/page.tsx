@@ -103,25 +103,21 @@ const GRANTS = [
   {
     title: "Wellcome Trust health data landscape review",
     role: "Consortium member",
-    value: "\u00a3200k",
     date: "2025\u20132026",
   },
   {
     title: "Multiple OpenSAFELY grants",
     role: "Co-I, lead drafter",
-    value: ">\u00a31.2m",
     date: "2020\u20132023",
   },
   {
     title: "Wellcome Trust Doctoral Studentship",
     role: "PI",
-    value: "\u00a3108k",
     date: "2020\u20132023",
   },
   {
     title: "Mohn Westlake Foundation \u201cPublic Policy Observatory\u201d",
     role: "Co-I",
-    value: "\u00a3450k",
     date: "2019\u20132023",
   },
 ];
@@ -176,7 +172,7 @@ export default function CV() {
           <img
             src="/images/desk-with-books.png"
             alt="At the desk"
-            className="hidden md:block w-28 h-28 rounded-2xl object-cover shadow-md shrink-0"
+            className="hidden md:block w-40 h-40 rounded-2xl shadow-md shrink-0"
           />
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
@@ -322,7 +318,7 @@ export default function CV() {
                         {item.role}
                       </span>
                       <span className="text-xs text-text-light">
-                        {item.value} · {item.date}
+                        {item.date}
                       </span>
                     </div>
                   </div>

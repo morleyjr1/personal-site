@@ -317,7 +317,7 @@ export default function Media() {
             alt="Speaking about AI ethics"
             width={112}
             height={112}
-            className="hidden md:block w-28 h-28 rounded-2xl object-cover shadow-md shrink-0"
+            className="hidden md:block w-40 h-40 rounded-2xl shadow-md shrink-0"
           />
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">

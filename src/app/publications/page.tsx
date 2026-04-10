@@ -89,9 +89,9 @@ export default function Publications() {
       <section className="bg-soft-pink/40 py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto flex items-start gap-6">
           <img
-            src="/images/research-stack.png"
-            alt="Research papers"
-            className="hidden md:block w-28 h-28 rounded-2xl object-cover shadow-md shrink-0"
+            src="/images/focused-research.png"
+            alt="Research"
+            className="hidden md:block w-40 h-40 rounded-2xl shadow-md shrink-0"
           />
           <div>
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">

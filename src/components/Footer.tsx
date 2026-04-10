@@ -59,7 +59,14 @@ export default function Footer() {
 
           {/* Column 3: Connect */}
           <div>
-            <h3 className="font-bold text-text-primary mb-2">Connect</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <img
+                src="/images/mug-sparkles.png"
+                alt=""
+                className="w-10 h-10 rounded-lg"
+              />
+              <h3 className="font-bold text-text-primary">Connect</h3>
+            </div>
             <div className="flex flex-col gap-1 text-sm text-text-secondary">
               <a
                 href="mailto:jessica.morley@yale.edu"
