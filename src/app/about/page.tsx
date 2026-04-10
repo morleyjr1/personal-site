@@ -76,14 +76,13 @@ export default function About() {
       <section className="py-16 px-4 bg-cream">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Photo placeholder */}
+            {/* Portrait */}
             <div className="md:col-span-1">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-lavender to-soft-pink flex items-center justify-center text-6xl shadow-lg">
-                🧑‍🔬
-              </div>
-              <p className="text-xs text-text-light text-center mt-3 italic">
-                Add your photo to public/images/
-              </p>
+              <img
+                src="/images/portrait.png"
+                alt="Dr Jessica Morley"
+                className="aspect-square rounded-2xl object-cover shadow-lg w-full"
+              />
             </div>
 
             {/* Bio text */}

@@ -87,9 +87,15 @@ export default function Publications() {
     <div className="page-enter">
       {/* Hero */}
       <section className="bg-soft-pink/40 py-16 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto flex items-start gap-6">
+          <img
+            src="/images/research-stack.png"
+            alt="Research papers"
+            className="hidden md:block w-28 h-28 rounded-2xl object-cover shadow-md shrink-0"
+          />
+          <div>
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            Publications 📝
+            Publications ✦
           </h1>
           <p className="text-lg text-text-secondary max-w-3xl mb-4">
             {totalCount} publications including {firstAuthorCount} first-authored
@@ -105,6 +111,7 @@ export default function Publications() {
             </a>
             .
           </p>
+          </div>
         </div>
       </section>
 

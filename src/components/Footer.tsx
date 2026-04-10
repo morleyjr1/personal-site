@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Column 1: About */}
           <div>
             <h3 className="font-bold text-text-primary mb-2 flex items-center gap-1">
-              ✨ Jessica Morley
+              ✨ Dr Jessica Morley
             </h3>
             <p className="text-sm text-text-secondary leading-relaxed">
               Digital ethics &amp; health policy researcher at Yale.
@@ -68,7 +68,7 @@ export default function Footer() {
                 jessica.morley@yale.edu
               </a>
               <a
-                href="https://scholar.google.com"
+                href="https://scholar.google.com/citations?user=hp-k6QwAAAAJ&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pop-purple transition-colors"
@@ -76,19 +76,27 @@ export default function Footer() {
                 Google Scholar
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/in/jessicarosemorley/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pop-purple transition-colors"
               >
-                Twitter / X
+                LinkedIn
+              </a>
+              <a
+                href="https://bsky.app/profile/jessrmorley.bsky.social"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pop-purple transition-colors"
+              >
+                Bluesky
               </a>
             </div>
           </div>
         </div>
 
         <div className="mt-8 pt-4 border-t border-lavender/30 text-center text-xs text-text-light">
-          <p>&copy; {new Date().getFullYear()} Jessica Morley. Built with sparkle.</p>
+          <p>&copy; {new Date().getFullYear()} Dr Jessica Morley. Built with sparkle.</p>
         </div>
       </div>
     </footer>

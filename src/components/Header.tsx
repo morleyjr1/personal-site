@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/" className="group flex items-center gap-2">
           <span className="text-2xl">✨</span>
           <span className="font-bold text-xl text-text-primary group-hover:text-pop-purple transition-colors">
-            Jessica Morley
+            Dr Jessica Morley
           </span>
         </Link>
 

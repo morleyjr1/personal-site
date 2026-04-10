@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const HIGHLIGHT_CARDS = [
   {
-    emoji: "📝",
+    image: "/images/research-publications.png",
     title: "Latest Research",
     description:
       "From the inverse data quality law to the translational gap between ethical principles and clinical practice — my research programme sits at the intersection of philosophy, public health, and regulatory science.",
@@ -11,7 +12,7 @@ const HIGHLIGHT_CARDS = [
     borderColor: "border-pop-purple/30",
   },
   {
-    emoji: "🎙️",
+    image: "/images/presenting-ai-ethics.png",
     title: "Media & Speaking",
     description:
       "BMJ editorials, BBC Radio 4, the Financial Times, and the occasional panel where I say what everyone else is thinking about NHS data governance.",
@@ -20,7 +21,7 @@ const HIGHLIGHT_CARDS = [
     borderColor: "border-pop-pink/30",
   },
   {
-    emoji: "🎓",
+    image: "/images/teaching.png",
     title: "Teaching",
     description:
       "My course on thinking critically about AI in health care.",
@@ -47,7 +48,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="animated-gradient py-20 md:py-32 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-5xl mb-6">✨</div>
+          <div className="mb-6">
+            <Image
+              src="/images/dr-j-logo.png"
+              alt="Dr. J logo"
+              width={120}
+              height={120}
+              className="mx-auto rounded-full"
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6 leading-tight">
             Hi, I&apos;m{" "}
             <span className="shimmer-text">Jessica Morley</span>
@@ -102,7 +111,15 @@ export default function Home() {
                 href={card.href}
                 className={`card-pop ${card.color} ${card.borderColor} border rounded-2xl p-6 block glitter-hover`}
               >
-                <div className="text-3xl mb-3">{card.emoji}</div>
+                <div className="mb-3 relative w-16 h-16">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    width={64}
+                    height={64}
+                    className="rounded-xl object-cover"
+                  />
+                </div>
                 <h3 className="text-lg font-bold text-text-primary mb-2">
                   {card.title}
                 </h3>
