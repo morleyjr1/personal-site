@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HIGHLIGHT_CARDS = [
   {
-    image: "/images/research-publications.png",
+    image: "/images/focused-research.png",
     title: "Latest Research",
     description:
       "From the inverse data quality law to the translational gap between ethical principles and clinical practice — my research programme sits at the intersection of philosophy, public health, and regulatory science.",
