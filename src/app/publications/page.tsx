@@ -6,60 +6,103 @@ import { PUBLICATIONS, type PublicationType, type Publication } from "@/data/pub
 /* ── Floating Teapot ─────────────────────────────────────────────── */
 function FloatingTeapot() {
   return (
-    <div className="hidden lg:flex fixed right-6 top-1/3 z-30 flex-col items-center gap-0 pointer-events-none select-none">
-      {/* Teapot */}
+    <div className="hidden lg:flex fixed left-6 top-1/4 z-30 flex-col items-center pointer-events-none select-none" style={{ width: "180px" }}>
       <svg
-        className="teapot-bob"
-        width="80"
-        height="64"
-        viewBox="0 0 80 64"
+        width="180"
+        height="200"
+        viewBox="0 0 180 200"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Body */}
-        <ellipse cx="36" cy="40" rx="26" ry="20" fill="var(--lavender)" stroke="var(--pop-purple)" strokeWidth="2" />
-        {/* Lid */}
-        <ellipse cx="36" cy="22" rx="16" ry="5" fill="var(--soft-pink)" stroke="var(--pop-purple)" strokeWidth="2" />
-        {/* Lid knob */}
-        <circle cx="36" cy="17" r="4" fill="var(--pop-pink)" stroke="var(--pop-purple)" strokeWidth="1.5" />
-        {/* Spout */}
-        <path d="M62 36 Q72 32 74 24" stroke="var(--pop-purple)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-        {/* Handle */}
-        <path d="M10 30 Q-2 40 10 50" stroke="var(--pop-purple)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-        {/* Sparkle on teapot */}
-        <text x="30" y="44" fontSize="10" fill="var(--pop-purple)" opacity="0.6">✦</text>
-      </svg>
+        {/* ── Teapot (top-right, tilted to pour) ── */}
+        <g className="teapot-bob" style={{ transformOrigin: "120px 50px" }}>
+          {/* Teapot body */}
+          <ellipse cx="110" cy="55" rx="38" ry="30" fill="#F5E6D3" stroke="#C4956A" strokeWidth="2.5" />
+          {/* Lid */}
+          <ellipse cx="110" cy="28" rx="22" ry="7" fill="#D4A574" stroke="#C4956A" strokeWidth="2" />
+          {/* Lid knob */}
+          <circle cx="110" cy="20" r="5" fill="#D4A574" stroke="#C4956A" strokeWidth="2" />
+          {/* Spout - curves down towards cup */}
+          <path d="M148 48 Q162 42 166 30 Q168 24 164 20" stroke="#C4956A" strokeWidth="3" fill="none" strokeLinecap="round" />
+          {/* Handle */}
+          <path d="M72 38 Q56 48 58 62 Q60 74 72 72" stroke="#C4956A" strokeWidth="3" fill="none" strokeLinecap="round" />
+          {/* Flower decorations on teapot */}
+          <circle cx="100" cy="50" r="4" fill="#E8775C" opacity="0.8" />
+          <circle cx="100" cy="50" r="1.5" fill="#F5E6D3" />
+          <circle cx="112" cy="58" r="3.5" fill="#E8775C" opacity="0.8" />
+          <circle cx="112" cy="58" r="1.3" fill="#F5E6D3" />
+          <circle cx="122" cy="48" r="3" fill="#E8775C" opacity="0.7" />
+          <circle cx="122" cy="48" r="1.2" fill="#F5E6D3" />
+          {/* Tiny leaves between flowers */}
+          <ellipse cx="106" cy="53" rx="3" ry="1.5" fill="#8DB580" opacity="0.7" transform="rotate(-30 106 53)" />
+          <ellipse cx="117" cy="52" rx="2.5" ry="1.2" fill="#8DB580" opacity="0.7" transform="rotate(20 117 52)" />
+        </g>
 
-      {/* Pour stream */}
-      <div
-        className="pour-stream w-1 rounded-full"
-        style={{ background: "linear-gradient(to bottom, var(--pop-purple), var(--lavender))", marginTop: "-4px", marginLeft: "38px" }}
-      />
+        {/* ── Pour stream from spout to cup ── */}
+        <path
+          className="pour-stream"
+          d="M164 22 Q166 40 158 70 Q152 90 140 108"
+          stroke="#C4956A"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.5"
+        />
 
-      {/* Cup */}
-      <svg
-        width="56"
-        height="44"
-        viewBox="0 0 56 44"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ marginTop: "-2px", marginLeft: "20px" }}
-      >
-        {/* Cup body */}
-        <path d="M6 8 L10 38 Q22 44 34 38 L38 8 Z" fill="var(--soft-pink)" stroke="var(--pop-purple)" strokeWidth="2" />
-        {/* Tea surface */}
-        <ellipse cx="22" cy="12" rx="16" ry="5" fill="var(--lavender)" stroke="var(--pop-purple)" strokeWidth="1.5" />
-        {/* Handle */}
-        <path d="M38 14 Q50 18 48 28 Q46 36 38 34" stroke="var(--pop-purple)" strokeWidth="2" fill="none" strokeLinecap="round" />
-        {/* Steam wisps */}
-        <circle className="steam" cx="14" cy="4" r="2.5" fill="var(--pop-purple)" opacity="0.2" />
-        <circle className="steam" cx="22" cy="2" r="2" fill="var(--pop-pink)" opacity="0.2" />
-        <circle className="steam" cx="30" cy="4" r="2.5" fill="var(--pop-purple)" opacity="0.15" />
+        {/* ── Tea bag (hanging left) ── */}
+        <g>
+          {/* String from teapot */}
+          <path d="M78 65 Q70 80 55 95" stroke="#A0845C" strokeWidth="1.5" fill="none" strokeDasharray="3 2" />
+          {/* Tag */}
+          <rect x="42" y="92" width="16" height="12" rx="2" fill="#F5E6D3" stroke="#C4956A" strokeWidth="1.5" />
+          {/* Tag text line */}
+          <line x1="46" y1="97" x2="54" y2="97" stroke="#C4956A" strokeWidth="1" opacity="0.5" />
+          {/* Tea bag */}
+          <path d="M52 104 L48 118 Q50 122 56 122 Q62 122 64 118 L60 104" fill="#D4A574" stroke="#C4956A" strokeWidth="1.5" />
+        </g>
+
+        {/* ── Cup 1 (receiving pour) ── */}
+        <g>
+          {/* Cup body */}
+          <path d="M120 118 L124 155 Q135 162 146 155 L150 118 Z" fill="#F5E6D3" stroke="#C4956A" strokeWidth="2" />
+          {/* Tea inside */}
+          <ellipse cx="135" cy="122" rx="15" ry="5" fill="#D4A574" opacity="0.6" />
+          {/* Cup rim */}
+          <ellipse cx="135" cy="118" rx="16" ry="5.5" fill="none" stroke="#C4956A" strokeWidth="2" />
+          {/* Handle */}
+          <path d="M150 125 Q162 128 161 138 Q160 148 150 148" stroke="#C4956A" strokeWidth="2" fill="none" strokeLinecap="round" />
+          {/* Flower on cup */}
+          <circle cx="135" cy="140" r="3" fill="#E8775C" opacity="0.7" />
+          <circle cx="135" cy="140" r="1.2" fill="#F5E6D3" />
+          {/* Steam */}
+          <circle className="steam" cx="128" cy="108" r="3" fill="#C4956A" opacity="0.15" />
+          <circle className="steam" cx="135" cy="106" r="2.5" fill="#C4956A" opacity="0.12" />
+          <circle className="steam" cx="142" cy="109" r="3" fill="#C4956A" opacity="0.15" />
+        </g>
+
+        {/* ── Cup 2 (left, already poured) ── */}
+        <g>
+          {/* Cup body */}
+          <path d="M22 130 L26 165 Q36 172 46 165 L50 130 Z" fill="#F5E6D3" stroke="#C4956A" strokeWidth="2" />
+          {/* Tea inside */}
+          <ellipse cx="36" cy="134" rx="14" ry="5" fill="#D4A574" opacity="0.6" />
+          {/* Cup rim */}
+          <ellipse cx="36" cy="130" rx="15" ry="5.5" fill="none" stroke="#C4956A" strokeWidth="2" />
+          {/* Handle */}
+          <path d="M50 137 Q62 140 61 150 Q60 160 50 158" stroke="#C4956A" strokeWidth="2" fill="none" strokeLinecap="round" />
+          {/* Flower on cup */}
+          <circle cx="36" cy="150" r="3" fill="#E8775C" opacity="0.7" />
+          <circle cx="36" cy="150" r="1.2" fill="#F5E6D3" />
+          {/* Steam */}
+          <circle className="steam" cx="30" cy="120" r="3" fill="#C4956A" opacity="0.15" />
+          <circle className="steam" cx="36" cy="118" r="2.5" fill="#C4956A" opacity="0.12" />
+          <circle className="steam" cx="42" cy="121" r="3" fill="#C4956A" opacity="0.15" />
+        </g>
       </svg>
 
       {/* Label */}
-      <p className="text-xs text-pop-purple font-semibold mt-2 text-center whitespace-nowrap">
-        cuppa whilst<br />you read? ☕
+      <p className="text-base text-text-secondary font-semibold mt-1 text-center whitespace-nowrap" style={{ fontFamily: "Georgia, serif" }}>
+        cuppa whilst<br />you read? 🫖
       </p>
     </div>
   );
