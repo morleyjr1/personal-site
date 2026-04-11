@@ -1,17 +1,37 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { PUBLICATIONS, type PublicationType, type Publication } from "@/data/publications";
 
-/* ── Floating Teapot ─────────────────────────────────────────────── */
-function FloatingTeapot() {
+/* ── Teapot Break ─────────────────────────────────────────────────── */
+function TeapotBreak() {
+  const [visible, setVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 15000); // appear after 15 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (dismissed || !visible) return null;
+
   return (
-    <div className="hidden xl:block fixed left-8 top-[45%] z-30 pointer-events-none select-none">
-      <img
-        src="/images/fancy-a-cuppa.png"
-        alt="Fancy a cuppa whilst you read?"
-        className="w-64 teapot-bob drop-shadow-lg"
-      />
+    <div className="teapot-appear my-8 mx-auto max-w-md flex flex-col items-center text-center px-4">
+      <div className="relative">
+        <img
+          src="/images/fancy-a-cuppa.png"
+          alt="Fancy a cuppa whilst you read?"
+          className="w-56 md:w-64 teapot-bob drop-shadow-md"
+        />
+      </div>
+      <button
+        onClick={() => setDismissed(true)}
+        className="mt-2 text-xs text-text-light hover:text-pop-purple transition-colors"
+      >
+        dismiss ✕
+      </button>
     </div>
   );
 }
@@ -124,8 +144,6 @@ export default function Publications() {
 
   return (
     <div className="page-enter">
-      <FloatingTeapot />
-
       {/* Hero */}
       <section className="bg-soft-pink/40 py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto flex items-start gap-6">
@@ -207,12 +225,15 @@ export default function Publications() {
       {/* Publication list grouped by year */}
       <section className="py-8 px-4 bg-cream">
         <div className="max-w-4xl mx-auto">
-          {years.map((year) => {
+          {years.map((year, yearIndex) => {
             const pubs = groupedByYear[year];
             if (!pubs || pubs.length === 0) return null;
 
             return (
-              <div key={year} className="mb-10">
+              <div key={year}>
+              {/* Show teapot after the 3rd year group */}
+              {yearIndex === 3 && <TeapotBreak />}
+              <div className="mb-10">
                 <h2 className="text-2xl font-bold text-text-primary mb-4 flex items-center gap-2">
                   <span className="text-pop-purple">{year}</span>
                   <span className="text-sm font-normal text-text-light">
@@ -281,6 +302,7 @@ export default function Publications() {
                     </div>
                   ))}
                 </div>
+              </div>
               </div>
             );
           })}
