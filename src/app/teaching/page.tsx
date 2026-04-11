@@ -227,6 +227,8 @@ export default function Teaching() {
               for the wrong targets, and governing with the wrong tools. Across
               six lectures, it builds a case for rethinking what health AI
               should be designed to do and how we should be governing its use.
+              You can find recordings of each lecture, along with the slides and
+              the references for each, below.
             </p>
           </div>
 

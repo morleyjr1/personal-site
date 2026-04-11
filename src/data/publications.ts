@@ -9,6 +9,7 @@ export interface Publication {
   type: PublicationType;
   firstAuthor: boolean;
   tags: string[];
+  laySummary?: string;
 }
 
 export const PUBLICATIONS: Publication[] = [
