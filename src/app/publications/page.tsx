@@ -6,11 +6,11 @@ import { PUBLICATIONS, type PublicationType, type Publication } from "@/data/pub
 /* ── Floating Teapot ─────────────────────────────────────────────── */
 function FloatingTeapot() {
   return (
-    <div className="hidden lg:block fixed left-4 top-1/4 z-30 pointer-events-none select-none">
+    <div className="hidden xl:block fixed left-8 top-[45%] z-30 pointer-events-none select-none">
       <img
         src="/images/fancy-a-cuppa.png"
         alt="Fancy a cuppa whilst you read?"
-        className="w-48 teapot-bob drop-shadow-lg"
+        className="w-64 teapot-bob drop-shadow-lg"
       />
     </div>
   );
