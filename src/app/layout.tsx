@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SparkleEffect from "@/components/SparkleEffect";
 import ThemeProvider from "@/components/ThemeProvider";
+import KonamiEasterEgg from "@/components/KonamiEasterEgg";
 
 export const metadata: Metadata = {
   title: "Dr Jessica Morley | Digital Ethics & Health Policy",
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <ThemeProvider>
           <SparkleEffect />
+          <KonamiEasterEgg />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

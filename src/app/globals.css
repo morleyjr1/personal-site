@@ -325,6 +325,35 @@ section, header, footer, nav, main,
   transform: rotate(360deg);
 }
 
+/* Easter egg: Konami code falling beads */
+@keyframes bead-fall {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translateY(110vh) translateX(var(--wobble, 0px)) rotate(720deg); opacity: 0; }
+}
+
+@keyframes lyric-appear {
+  0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Easter egg: colour party */
+@keyframes colour-party-bounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.2) rotate(-8deg); }
+  50% { transform: scale(0.9) rotate(5deg); }
+  75% { transform: scale(1.15) rotate(-3deg); }
+}
+
+@keyframes colour-party-cycle {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.colour-party .bracelet-bead {
+  animation: colour-party-bounce 0.5s ease-in-out infinite, colour-party-cycle 2s linear infinite;
+}
+
 /* Smooth page transitions */
 .page-enter {
   animation: fadeInUp 0.6s ease-out;

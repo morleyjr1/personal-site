@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "./ThemeProvider";
@@ -27,7 +27,17 @@ const NAV_ITEMS = [
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [colourParty, setColourParty] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const on = (e as CustomEvent).detail;
+      setColourParty(on);
+    };
+    window.addEventListener("colour-party", handler);
+    return () => window.removeEventListener("colour-party", handler);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-cream/80 border-b border-lavender/50">
@@ -50,7 +60,7 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className={`hidden md:flex items-center gap-2 ${colourParty ? "colour-party" : ""}`}>
           <div className="bracelet-string">
             {NAV_ITEMS.map((item, i) => {
               const isActive = pathname === item.href;

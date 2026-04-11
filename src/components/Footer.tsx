@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const BRACELET_DOTS = [
   "bg-pop-pink",
@@ -13,6 +16,34 @@ const BRACELET_DOTS = [
 ];
 
 export default function Footer() {
+  const [clickCount, setClickCount] = useState(0);
+  const [party, setParty] = useState(false);
+
+  useEffect(() => {
+    if (clickCount >= 3) {
+      setParty(true);
+      setClickCount(0);
+      const timer = setTimeout(() => setParty(false), 3000);
+      return () => clearTimeout(timer);
+    }
+    // Reset click count after 1 second of no clicking
+    if (clickCount > 0) {
+      const reset = setTimeout(() => setClickCount(0), 1000);
+      return () => clearTimeout(reset);
+    }
+  }, [clickCount]);
+
+  // Dispatch custom event so header can pick it up
+  useEffect(() => {
+    if (party) {
+      window.dispatchEvent(new CustomEvent("colour-party", { detail: true }));
+      const timer = setTimeout(() => {
+        window.dispatchEvent(new CustomEvent("colour-party", { detail: false }));
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [party]);
+
   return (
     <footer className="mt-auto bg-light-lilac/50 border-t border-lavender/30">
       {/* Bracelet divider */}
@@ -103,7 +134,17 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-4 border-t border-lavender/30 text-center text-xs text-text-light">
-          <p>&copy; {new Date().getFullYear()} Dr Jessica Morley. Built with sparkle.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Dr Jessica Morley.{" "}
+            <span
+              onClick={() => setClickCount((c) => c + 1)}
+              className="cursor-default select-none"
+              style={{ WebkitUserSelect: "none" }}
+            >
+              Built with sparkle.
+            </span>
+            {party && <span className="ml-1 inline-block animate-bounce">🎉</span>}
+          </p>
         </div>
       </div>
     </footer>
