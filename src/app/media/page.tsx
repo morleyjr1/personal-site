@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SpeakNowOverlay from "@/components/SpeakNowOverlay";
 
 type MediaType = "keynote" | "conference" | "podcast" | "broadcast" | "panel" | "seminar" | "interview";
 
@@ -309,6 +310,8 @@ const BMJ_EDITORIALS = [
 export default function Media() {
   return (
     <div className="page-enter">
+      <SpeakNowOverlay />
+
       {/* Hero */}
       <section className="bg-mint/40 py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto flex items-start gap-6">
