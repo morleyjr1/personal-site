@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "./ThemeProvider";
 
 const MINI_BRACELET_COLORS = [
   "bg-pop-pink",
@@ -26,6 +27,7 @@ const NAV_ITEMS = [
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-cream/80 border-b border-lavender/50">
@@ -48,7 +50,7 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className="hidden md:block">
+        <nav className="hidden md:flex items-center gap-2">
           <div className="bracelet-string">
             {NAV_ITEMS.map((item, i) => {
               const isActive = pathname === item.href;
@@ -68,6 +70,16 @@ export default function Header() {
               );
             })}
           </div>
+          <button
+            onClick={toggleTheme}
+            className="bracelet-bead bg-gold text-text-primary relative z-10 theme-toggle-bead"
+            aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+            title={theme === "light" ? "After dark ✦" : "Let there be light ☀"}
+          >
+            <span className="theme-toggle-icon">
+              {theme === "light" ? "🌙" : "☀️"}
+            </span>
+          </button>
         </nav>
 
         <button
@@ -97,6 +109,12 @@ export default function Header() {
                 </Link>
               );
             })}
+            <button
+              onClick={toggleTheme}
+              className="bracelet-bead bg-gold text-text-primary"
+            >
+              {theme === "light" ? "🌙" : "☀️"}
+            </button>
           </div>
         </nav>
       )}

@@ -52,10 +52,87 @@
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 }
 
+/* Dark mode overrides */
+.dark {
+  /* Pastel backgrounds → deep jewel tones */
+  --lavender: #2A1F3D;
+  --soft-pink: #3D1F2E;
+  --mint: #1A2E28;
+  --peach: #2E2419;
+  --cream: #1A1525;
+  --light-lilac: #241D35;
+
+  /* Pop accents stay vibrant but slightly adjusted for contrast */
+  --pop-purple: #B47EF0;
+  --pop-pink: #F472C8;
+  --pop-yellow: #FEE440;
+  --pop-blue: #3DC8F5;
+  --pop-green: #2CFFD4;
+  --pop-coral: #FF8577;
+  --gold: #FFD700;
+
+  /* Text → light on dark */
+  --text-primary: #F0E6FA;
+  --text-secondary: #C4B5D9;
+  --text-light: #8B7AA8;
+
+  /* Base */
+  --background: #120E1A;
+  --foreground: #F0E6FA;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Smooth theme transitions on sections and cards */
+section, header, footer, nav, main,
+.card-pop, .bracelet-bead, .bg-white {
+  transition: background-color 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode: override hardcoded whites and shadows */
+.dark .bg-white {
+  background-color: #1E1730 !important;
+}
+
+.dark .bg-cream\/80,
+.dark .bg-cream\/90 {
+  background-color: rgba(26, 21, 37, 0.9) !important;
+}
+
+.dark .border-lavender\/50 {
+  border-color: rgba(42, 31, 61, 0.5) !important;
+}
+
+.dark .card-pop:hover {
+  box-shadow: 0 12px 40px rgba(180, 126, 240, 0.15);
+}
+
+.dark .ring-offset-cream {
+  --tw-ring-offset-color: #1A1525;
+}
+
+.dark .animated-gradient {
+  background: linear-gradient(-45deg, #2A1F3D, #3D1F2E, #1A2E28, #2E2419);
+  background-size: 400% 400%;
+}
+
+.dark .shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--text-primary) 0%,
+    var(--pop-purple) 25%,
+    var(--pop-pink) 50%,
+    var(--pop-purple) 75%,
+    var(--text-primary) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 /* Animated gradient background */
@@ -231,6 +308,21 @@ body {
 
 .teapot-fade-out {
   animation: teapot-fade-out 0.8s ease-in forwards;
+}
+
+/* Theme toggle */
+.theme-toggle-bead {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.7rem;
+}
+
+.theme-toggle-icon {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle-bead:active .theme-toggle-icon {
+  transform: rotate(360deg);
 }
 
 /* Smooth page transitions */
