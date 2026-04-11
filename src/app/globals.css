@@ -211,18 +211,26 @@ body {
   50% { transform: translateY(-8px); }
 }
 
-@keyframes teapot-appear {
-  0% { opacity: 0; transform: translateY(30px) scale(0.9); }
-  60% { opacity: 1; transform: translateY(-5px) scale(1.02); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
 .teapot-bob {
   animation: teapot-bob 4s ease-in-out infinite;
 }
 
-.teapot-appear {
-  animation: teapot-appear 1s ease-out forwards;
+@keyframes teapot-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes teapot-fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.teapot-fade-in {
+  animation: teapot-fade-in 0.8s ease-out forwards;
+}
+
+.teapot-fade-out {
+  animation: teapot-fade-out 0.8s ease-in forwards;
 }
 
 /* Smooth page transitions */

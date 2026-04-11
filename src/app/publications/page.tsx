@@ -3,35 +3,50 @@
 import { useState, useMemo, useEffect } from "react";
 import { PUBLICATIONS, type PublicationType, type Publication } from "@/data/publications";
 
-/* ── Teapot Break ─────────────────────────────────────────────────── */
-function TeapotBreak() {
-  const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+/* ── Teapot Overlay ───────────────────────────────────────────────── */
+function TeapotOverlay() {
+  const [phase, setPhase] = useState<"waiting" | "visible" | "fading" | "gone">("waiting");
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, 15000); // appear after 15 seconds
-    return () => clearTimeout(timer);
+    const showTimer = setTimeout(() => {
+      setPhase("visible");
+    }, 15000);
+    return () => clearTimeout(showTimer);
   }, []);
 
-  if (dismissed || !visible) return null;
+  useEffect(() => {
+    if (phase === "visible") {
+      const fadeTimer = setTimeout(() => {
+        setPhase("fading");
+      }, 4000);
+      return () => clearTimeout(fadeTimer);
+    }
+    if (phase === "fading") {
+      const removeTimer = setTimeout(() => {
+        setPhase("gone");
+      }, 800);
+      return () => clearTimeout(removeTimer);
+    }
+  }, [phase]);
+
+  if (phase === "waiting" || phase === "gone") return null;
 
   return (
-    <div className="teapot-appear my-8 mx-auto max-w-md flex flex-col items-center text-center px-4">
-      <div className="relative">
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center ${
+        phase === "fading" ? "teapot-fade-out" : "teapot-fade-in"
+      }`}
+      style={{ backgroundColor: "rgba(255, 248, 240, 0.93)", cursor: "pointer" }}
+      onClick={() => setPhase("fading")}
+    >
+      <div className="flex flex-col items-center">
         <img
           src="/images/fancy-a-cuppa.png"
           alt="Fancy a cuppa whilst you read?"
-          className="w-56 md:w-64 teapot-bob drop-shadow-md"
+          className="w-72 md:w-80 lg:w-96 teapot-bob drop-shadow-lg"
         />
+        <p className="mt-4 text-sm text-text-light">click anywhere to continue reading</p>
       </div>
-      <button
-        onClick={() => setDismissed(true)}
-        className="mt-2 text-xs text-text-light hover:text-pop-purple transition-colors"
-      >
-        dismiss ✕
-      </button>
     </div>
   );
 }
@@ -144,6 +159,8 @@ export default function Publications() {
 
   return (
     <div className="page-enter">
+      <TeapotOverlay />
+
       {/* Hero */}
       <section className="bg-soft-pink/40 py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto flex items-start gap-6">
@@ -225,14 +242,12 @@ export default function Publications() {
       {/* Publication list grouped by year */}
       <section className="py-8 px-4 bg-cream">
         <div className="max-w-4xl mx-auto">
-          {years.map((year, yearIndex) => {
+          {years.map((year) => {
             const pubs = groupedByYear[year];
             if (!pubs || pubs.length === 0) return null;
 
             return (
               <div key={year}>
-              {/* Show teapot after the 3rd year group */}
-              {yearIndex === 3 && <TeapotBreak />}
               <div className="mb-10">
                 <h2 className="text-2xl font-bold text-text-primary mb-4 flex items-center gap-2">
                   <span className="text-pop-purple">{year}</span>
