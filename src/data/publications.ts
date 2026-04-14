@@ -14,6 +14,16 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    title: "Protecting health data at UK Biobank",
+    authors: "Rocher, L., & Morley, J.",
+    journal: "BMJ",
+    year: 2026,
+    doi: "https://doi.org/10.1136/bmj.s660",
+    type: "editorial",
+    firstAuthor: false,
+    tags: ["Health Data", "Regulation"]
+  },
+  {
     title: "Agentic AI Optimisation (AAIO)",
     authors: "Floridi, L., Buttaboni, C., Hine, E., Morley, J., Novelli, C., & Schroder, T.",
     journal: "arXiv",

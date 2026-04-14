@@ -71,7 +71,7 @@ export default function Header() {
                   className={`bracelet-bead ${item.color} relative z-10 ${
                     isActive
                       ? "ring-2 ring-gold ring-offset-2 ring-offset-cream scale-110"
-                      : "opacity-85 hover:opacity-100"
+                      : "hover:brightness-110"
                   }`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >

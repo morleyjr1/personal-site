@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { PUBLICATIONS } from "@/data/publications";
 
 const HIGHLIGHT_CARDS = [
   {
@@ -43,6 +44,9 @@ const INTEREST_BEADS = [
 ];
 
 export default function Home() {
+  // Most recent publication (first in the list, which is ordered newest-first)
+  const latest = PUBLICATIONS[0];
+
   return (
     <div className="page-enter">
       {/* Hero Section */}
@@ -95,6 +99,40 @@ export default function Home() {
               See my research
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Latest banner */}
+      <section className="py-8 px-4 bg-cream border-y border-lavender/40">
+        <div className="max-w-4xl mx-auto">
+          <Link
+            href="/publications"
+            className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-5 bg-gradient-to-r from-pop-yellow/20 via-pop-pink/15 to-pop-purple/20 rounded-2xl p-4 md:p-5 border border-pop-purple/30 hover:shadow-lg hover:shadow-pop-purple/20 transition-all group"
+          >
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="inline-flex items-center gap-1.5 bg-pop-purple text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
+                Latest
+              </span>
+              <span className="text-xs uppercase tracking-wider font-semibold text-text-secondary">
+                {latest.type === "editorial" ? "Editorial" : latest.type === "journal" ? "Journal Article" : "Publication"}
+              </span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-base md:text-lg font-bold text-text-primary leading-snug group-hover:text-pop-purple transition-colors">
+                {latest.title}
+              </p>
+              <p className="text-sm text-text-secondary mt-0.5">
+                {latest.authors} · <span className="text-pop-purple font-medium">{latest.journal}</span> ({latest.year})
+              </p>
+            </div>
+            <span className="text-pop-purple font-semibold text-sm shrink-0 whitespace-nowrap">
+              Read →
+            </span>
+          </Link>
         </div>
       </section>
 

@@ -49,10 +49,13 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         <ThemeProvider>
+          <a href="#main-content" className="skip-to-content">
+            Skip to main content
+          </a>
           <SparkleEffect />
           <KonamiEasterEgg />
           <Header />
-          <main className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

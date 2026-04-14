@@ -18,10 +18,10 @@
   --pop-coral: #FF6F61;
   --gold: #FFD700;
 
-  /* Text */
+  /* Text - contrast-optimised for WCAG AA on cream backgrounds */
   --text-primary: #2D1B4E;
-  --text-secondary: #5A4478;
-  --text-light: #8B7AA8;
+  --text-secondary: #4A3666;  /* darkened from #5A4478 for better contrast */
+  --text-light: #6B5588;       /* darkened from #8B7AA8 for better contrast */
 
   /* Base */
   --background: #FFF8F0;
@@ -71,10 +71,10 @@
   --pop-coral: #FF8577;
   --gold: #FFD700;
 
-  /* Text → light on dark */
+  /* Text → light on dark (contrast-optimised) */
   --text-primary: #F0E6FA;
-  --text-secondary: #C4B5D9;
-  --text-light: #8B7AA8;
+  --text-secondary: #D4C5E9;  /* lightened for better contrast */
+  --text-light: #A89BC0;       /* lightened for better contrast */
 
   /* Base */
   --background: #120E1A;
@@ -86,6 +86,45 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Accessibility: visible focus rings for keyboard users */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--pop-purple);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip to content link for screen reader / keyboard users */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--pop-purple);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.skip-to-content:focus {
+  left: 0;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Smooth theme transitions on sections and cards */
