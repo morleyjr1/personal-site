@@ -69,8 +69,9 @@ export default function Home() {
             I&apos;m an Associate Research Scientist at Yale&apos;s Digital
             Ethics Center, working on the political philosophy of health AI:
             what it should be optimising for, why it has been assigned the wrong
-            target, and what it would take to get to the right one. Part
-            philosopher, part policy wonk, part digilante.
+            target, and what it would take to get to the right one. My work
+            bridges philosophy, public health, and regulatory science to
+            ensure health AI serves population health, not just productivity.
           </p>
 
           {/* Research interest beads */}
