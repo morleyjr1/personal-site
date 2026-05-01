@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PUBLICATIONS } from "@/data/publications";
+import Sticker from "@/components/Sticker";
 
 const HIGHLIGHT_CARDS = [
   {
@@ -174,10 +175,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Fun quote / Easter egg */}
+      {/* Stickers + quote */}
       <section className="py-12 px-4 bg-light-lilac/30">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-text-light text-sm italic">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+            <Sticker
+              src="/images/stickers/move-slow-fix-things.png"
+              alt="Move slow. Fix things."
+              rotate={-3}
+            />
+            <Sticker
+              src="/images/stickers/certified-digilante.png"
+              alt="Certified Digilante"
+              rotate={2}
+            />
+          </div>
+          <p className="text-text-light text-sm italic text-center">
             &quot;Long story short, I survived&quot; — but mostly I research, and then
             I write about it in peer-reviewed journals. ✨
           </p>

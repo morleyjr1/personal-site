@@ -1,3 +1,5 @@
+import Sticker from "@/components/Sticker";
+
 const TIMELINE = [
   {
     year: "2026–",
@@ -287,9 +289,26 @@ export default function About() {
         </div>
       </section>
 
-      {/* Personal */}
+      {/* Personal + stickers */}
       <section className="py-12 px-4 bg-light-lilac/30">
         <div className="max-w-3xl mx-auto text-center">
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-6">
+            <Sticker
+              src="/images/stickers/build-for-people.png"
+              alt="Build for people, not for profit"
+              rotate={-2}
+            />
+            <Sticker
+              src="/images/stickers/mind-the-data-gap.png"
+              alt="Mind the (data) gap"
+              rotate={3}
+            />
+            <Sticker
+              src="/images/stickers/people-privacy-public-good.png"
+              alt="People. Privacy. Public good."
+              rotate={-1}
+            />
+          </div>
           <p className="text-text-secondary leading-relaxed">
             When I&apos;m not thinking about the governance of health data, you
             can probably find me making friendship bracelets, constructing

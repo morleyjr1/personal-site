@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Sticker from "@/components/Sticker";
 
 const EDUCATION = [
   {
@@ -374,25 +375,39 @@ export default function CV() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-12 px-4 bg-light-lilac/30 text-center">
-        <p className="text-text-secondary">
-          For a complete list of publications, see{" "}
-          <Link
-            href="/publications"
-            className="text-pop-purple font-semibold hover:underline"
-          >
-            publications
-          </Link>
-          . For speaking and media enquiries,{" "}
-          <a
-            href="mailto:jessica.morley@yale.edu"
-            className="text-pop-purple font-semibold hover:underline"
-          >
-            get in touch
-          </a>
-          . ✨
-        </p>
+      {/* Stickers + CTA */}
+      <section className="py-12 px-4 bg-light-lilac/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+            <Sticker
+              src="/images/stickers/design-build-audit-repeat.png"
+              alt="Design it. Build it. Audit it. Repeat."
+              rotate={-2}
+            />
+            <Sticker
+              src="/images/stickers/better-data-better-health.png"
+              alt="Better data. Better health."
+              rotate={3}
+            />
+          </div>
+          <p className="text-text-secondary text-center">
+            For a complete list of publications, see{" "}
+            <Link
+              href="/publications"
+              className="text-pop-purple font-semibold hover:underline"
+            >
+              publications
+            </Link>
+            . For speaking and media enquiries,{" "}
+            <a
+              href="mailto:jessica.morley@yale.edu"
+              className="text-pop-purple font-semibold hover:underline"
+            >
+              get in touch
+            </a>
+            . ✨
+          </p>
+        </div>
       </section>
     </div>
   );

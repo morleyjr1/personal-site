@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { PUBLICATIONS, type PublicationType, type Publication } from "@/data/publications";
+import Sticker from "@/components/Sticker";
 
 /* ── Teapot Overlay ───────────────────────────────────────────────── */
 function TeapotOverlay() {
@@ -330,6 +331,32 @@ export default function Publications() {
               </p>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Stickers */}
+      <section className="py-10 px-4 bg-light-lilac/30">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-6">
+          <Sticker
+            src="/images/stickers/read-widely-design-wisely.png"
+            alt="Read widely. Design wisely."
+            rotate={-2}
+          />
+          <Sticker
+            src="/images/stickers/cute-model-impact-assessment.png"
+            alt="Cute model. Where's your impact assessment"
+            rotate={3}
+          />
+          <Sticker
+            src="/images/stickers/evidence-equity-ethics.png"
+            alt="Evidence. Equity. Ethics."
+            rotate={-1}
+          />
+          <Sticker
+            src="/images/stickers/please-dont-deploy-that.png"
+            alt="Please please please don't deploy that"
+            rotate={2}
+          />
         </div>
       </section>
     </div>
