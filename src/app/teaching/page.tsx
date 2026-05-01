@@ -273,28 +273,28 @@ export default function Teaching() {
       {/* Stickers + CTA */}
       <section className="py-12 px-4 bg-cream">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Sticker
               src="/images/stickers/ask-better-questions.png"
               alt="Ask better questions. Build better systems."
               rotate={2}
             />
+            <p className="text-text-secondary text-center flex-1">
+              Interested in having me guest lecture or co-design a workshop?{" "}
+              <a
+                href="mailto:jessica.morley@yale.edu"
+                className="text-pop-purple font-semibold hover:underline"
+              >
+                Get in touch
+              </a>
+              . ✨
+            </p>
             <Sticker
               src="/images/stickers/its-never-just-tech.png"
               alt="It's never just tech"
               rotate={-3}
             />
           </div>
-          <p className="text-text-secondary text-center">
-            Interested in having me guest lecture or co-design a workshop?{" "}
-            <a
-              href="mailto:jessica.morley@yale.edu"
-              className="text-pop-purple font-semibold hover:underline"
-            >
-              Get in touch
-            </a>
-            . ✨
-          </p>
         </div>
       </section>
     </div>

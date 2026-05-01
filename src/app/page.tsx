@@ -178,22 +178,22 @@ export default function Home() {
       {/* Stickers + quote */}
       <section className="py-12 px-4 bg-light-lilac/30">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Sticker
               src="/images/stickers/move-slow-fix-things.png"
               alt="Move slow. Fix things."
               rotate={-3}
             />
+            <p className="text-text-light text-sm italic text-center flex-1">
+              &quot;Long story short, I survived&quot; — but mostly I research, and then
+              I write about it in peer-reviewed journals. ✨
+            </p>
             <Sticker
               src="/images/stickers/certified-digilante.png"
               alt="Certified Digilante"
               rotate={2}
             />
           </div>
-          <p className="text-text-light text-sm italic text-center">
-            &quot;Long story short, I survived&quot; — but mostly I research, and then
-            I write about it in peer-reviewed journals. ✨
-          </p>
         </div>
       </section>
     </div>

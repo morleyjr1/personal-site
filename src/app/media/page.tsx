@@ -414,29 +414,29 @@ export default function Media() {
       {/* Stickers + CTA */}
       <section className="py-12 px-4 bg-cream">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Sticker
               src="/images/stickers/beyond-the-hype.png"
               alt="Beyond the hype"
               rotate={-3}
             />
+            <p className="text-text-secondary text-center flex-1">
+              Interested in having me speak at your event or contribute to your
+              publication?{" "}
+              <a
+                href="mailto:jessica.morley@yale.edu"
+                className="text-pop-purple font-semibold hover:underline"
+              >
+                Get in touch
+              </a>
+              . ✨
+            </p>
             <Sticker
               src="/images/stickers/beware-aitrogenic-harm.png"
               alt="Beware AItrogenic harm"
               rotate={2}
             />
           </div>
-          <p className="text-text-secondary text-center">
-            Interested in having me speak at your event or contribute to your
-            publication?{" "}
-            <a
-              href="mailto:jessica.morley@yale.edu"
-              className="text-pop-purple font-semibold hover:underline"
-            >
-              Get in touch
-            </a>
-            . ✨
-          </p>
         </div>
       </section>
     </div>
