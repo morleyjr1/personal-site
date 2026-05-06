@@ -25,15 +25,54 @@ export type UpcomingEvent = {
 };
 
 export const UPCOMING_EVENTS: UpcomingEvent[] = [
-  // Example — replace with real events
   {
-    title: "Example talk title",
-    date: "2026-09-15",
-    dateLabel: "15 September 2026",
+    title: "From analogue to digital: artificial intelligence in the NHS",
+    date: "2026-05-13",
+    dateLabel: "13 May 2026",
     location: "London, UK",
-    host: "Hosting organisation",
+    host: "Royal College of Physicians",
     blurb:
-      "A short description of the talk topic. Two sentences max — keep it punchy.",
-    url: "https://example.com/event",
+      "Professor Alastair Denniston will present for 15 minutes on the regulation of AI in medicine, I will present for 15 minutes on the ethics of AI in medicine, then there will be a panel discussion.",
+    url: "https://rcpmedicine.co.uk/2026/programme",
+  },
+   {
+    title: "The role of AI in health and care planning, delivery, and rapid evaluation – now and in the future",
+    date: "2026-05-13",
+    dateLabel: "13 May 2026",
+    location: "London, UK",
+    host: "Nuffield Trust",
+    blurb:
+      "Myself and Thea Stein, Chief Executive of the Nuffield Trust, will sit down for a fireside chat and audience Q&A to talk all things evidence and AI in medicine.",
+    url: "https://www.nuffieldtrust.org.uk/event/rapid-evaluation-in-health-care-2026-0",
+  },
+   {
+    title: "Rethinking AI, Tech and Health Equity in Medicine",
+    date: "2026-05-15",
+    dateLabel: "15 May 2026",
+    location: "Oxford, UK",
+    host: "Green Templeton College, University of Oxford",
+    blurb:
+      "This year’s Human Welfare Conference explores how AI and related technologies can be developed and deployed in ways that genuinely serve human welfare, rather than reinforce existing inequalities. I will give the afternoon keynote lecture on the Health AI alignment problem.",
+    url: "https://www.gtc.ox.ac.uk/news-and-events/event/rethinking-ai-tech-health-equity-in-medicine/",
+  },
+ {
+    title: "Festival of Global Health: The Thinking Game",
+    date: "2026-05-13",
+    dateLabel: "13 May 2026",
+    location: "Oxford, UK",
+    host: "Oxford Population Health",
+    blurb:
+      "The film The Thinking Game about the AI company DeepMind will be screened. After the screening i will participate in a panel discussion about the ethical implications raised. Pizza and snacks will be provided after the panel discussion.",
+    url: "https://www.eventbrite.co.uk/e/festival-of-global-health-the-thinking-game-tickets-1987379840602",
+  },
+ {
+    title: "21st Medical Dermatology Meeting 2026",
+    date: "2026-05-21",
+    dateLabel: "21 May 2026",
+    location: "Online",
+    host: "British Association of Dermatologists",
+    blurb:
+      "I will give a 30 minute online talk about the ethics of AI in healthcare and, in particular, the role of systems design in governing its use.",
+    url: "https://bad.org.uk/events/21st-medical-dermatology-meeting-2026",
   },
 ];
