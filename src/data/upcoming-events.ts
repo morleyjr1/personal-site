@@ -75,4 +75,14 @@ export const UPCOMING_EVENTS: UpcomingEvent[] = [
       "I will give a 30 minute online talk about the ethics of AI in healthcare and, in particular, the role of systems design in governing its use.",
     url: "https://bad.org.uk/events/21st-medical-dermatology-meeting-2026",
   },
+   {
+    title: "AI, Precision Medicine and Solidarity Workshop",
+    date: "2026-05-18",
+    dateLabel: "18 May 2026 - 21 May 2026",
+    location: "Lake Geneva, Switzerland",
+    host: "Brocher Foundation",
+    blurb:
+      "Artificial intelligence and precision medicine are rapidly transforming medical practices. However, these innovations raise questions about equity, solidarity and access to care. This workshop explores the ethical implications of these technologies and examines how health systems can integrate these innovations while preserving the fundamental principles of justice and equity.",
+    url: "https://fondation-brocher.ch/event/workshop-3-ai-precision-medicine-and-solidarity/",
+  },
 ];
