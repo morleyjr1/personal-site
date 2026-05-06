@@ -1,4 +1,5 @@
 /**
+ * Upcoming talks, keynotes, and panels.
  *
  * Schema:
  *   title    — name of the talk / event
@@ -24,6 +25,7 @@ export type UpcomingEvent = {
 };
 
 export const UPCOMING_EVENTS: UpcomingEvent[] = [
+  // Example — replace with real events
   {
     title: "Example talk title",
     date: "2026-09-15",
