@@ -20,6 +20,7 @@ const NAV_ITEMS = [
   { href: "/about", label: "About", color: "bg-pop-purple text-white" },
   { href: "/publications", label: "Pubs", color: "bg-pop-blue text-white" },
   { href: "/media", label: "Media", color: "bg-pop-green text-text-primary" },
+  { href: "/upcoming", label: "Up next", color: "bg-mint text-text-primary" },
   { href: "/teaching", label: "Teach", color: "bg-pop-yellow text-text-primary" },
   { href: "/cv", label: "CV", color: "bg-pop-coral text-white" },
 ];
