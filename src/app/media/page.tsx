@@ -31,6 +31,13 @@ const BROADCAST_PODCASTS: {
   url: string;
   type: MediaType;
 }[] = [
+   {
+    title: "Neighbourhoods INSIGHTS' Series -The risks of risk stratification in neighbourhood health",
+    outlet: "Panel discussion",
+    date: "April 2026",
+    url: "https://www.youtube.com/watch?v=NdEOYJZ8_TA",
+    type: "panel",
+  },
   {
     title: "AI and decision-making in health and care",
     outlet: "Keynote talk",
@@ -254,13 +261,6 @@ const BROADCAST_PODCASTS: {
     date: "November 2018",
     url: "https://www.youtube.com/watch?v=p8SowCa02N8",
     type: "conference",
-  },
-  {
-    title: "Neighbourhoods INSIGHTS' Series -The risks of risk stratification in neighbourhood health",
-    outlet: "Panel discussion",
-    date: "April 2026",
-    url: "https://www.youtube.com/watch?v=NdEOYJZ8_TA",
-    type: "panel",
   },
 ];
 
