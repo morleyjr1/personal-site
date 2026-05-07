@@ -255,6 +255,13 @@ const BROADCAST_PODCASTS: {
     url: "https://www.youtube.com/watch?v=p8SowCa02N8",
     type: "conference",
   },
+  {
+    title: "Neighbourhoods INSIGHTS' Series -The risks of risk stratification in neighbourhood health",
+    outlet: "Panel discussion",
+    date: "April 2026",
+    url: "https://www.youtube.com/watch?v=NdEOYJZ8_TA",
+    type: "panel",
+  },
 ];
 
 const BMJ_EDITORIALS = [
