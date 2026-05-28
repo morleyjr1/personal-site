@@ -32,6 +32,20 @@ const BROADCAST_PODCASTS: {
   type: MediaType;
 }[] = [
    {
+    title: "From analogue to digital: artificial intelligence in the NHS",
+    outlet: "Talk & Q&A",
+    date: "May 2026",
+    url: "https://www.rcpmedicine.co.uk/2026/webcasts/4",
+    type: "panel",
+  }, 
+  {
+    title: "The role of AI in health and care planning, delivery, and rapid evaluation",
+    outlet: "Plenary session",
+    date: "May 2026",
+    url: "https://www.youtube.com/watch?v=QdDw1iSbOxo&list=PLZVCc0MBkIa1Y02oatukxdxSCjw0aZp-6&index=5",
+    type: "keynote",
+  }, 
+  {
     title: "Neighbourhoods INSIGHTS' Series -The risks of risk stratification in neighbourhood health",
     outlet: "Panel discussion",
     date: "April 2026",
