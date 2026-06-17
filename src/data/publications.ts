@@ -19,7 +19,7 @@ export const PUBLICATIONS: Publication[] = [
     journal: "BMJ",
     year: 2026,
     doi: "https://doi.org/10.1136/bmj-2026-256222",
-    type: "opinion",
+    type: "editorial",
     firstAuthor: true,
     tags: ["Health Data", "Regulation"]
   },
