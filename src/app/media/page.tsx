@@ -31,7 +31,14 @@ const BROADCAST_PODCASTS: {
   url: string;
   type: MediaType;
 }[] = [
-   {
+  {
+    title: "The Faces of Digital Health",
+    outlet: "Podcast",
+    date: "June 2026",
+    url: "https://www.youtube.com/watch?v=OXb4jou_aP8",
+    type: "podcast",
+  },  
+  {
     title: "From analogue to digital: artificial intelligence in the NHS",
     outlet: "Talk & Q&A",
     date: "May 2026",
