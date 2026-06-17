@@ -25,6 +25,17 @@ export type UpcomingEvent = {
 };
 
 export const UPCOMING_EVENTS: UpcomingEvent[] = [
+{
+    title: "Incubator for AI & Digital Healthcare - Code for We, not for Me ",
+    date: "2026-05-13",
+    dateLabel: "24 June 2026",
+    location: "Zoom",
+    host: "CERSI-AI",
+    blurb:
+      "Code for We, not for Me explores the limitations of AI for personalised risk prediction and the opportunities for using AI as a public health tool.",
+    url: "https://bham-ac-uk.zoom.us/webinar/register/WN_rOchrxp4QlmfHeUk3-esIw#/registration",
+  },
+  
   {
     title: "From analogue to digital: artificial intelligence in the NHS",
     date: "2026-05-13",
