@@ -13,6 +13,16 @@ export interface Publication {
 }
 
 export const PUBLICATIONS: Publication[] = [
+   {
+    title: "The single patient record: a laudable aim, at risk of mistakes that could derail it",
+    authors: "Morley, J.",
+    journal: "BMJ",
+    year: 2026,
+    doi: "https://doi.org/10.1136/bmj-2026-256222",
+    type: "opinion",
+    firstAuthor: true,
+    tags: ["Health Data", "Regulation"]
+  },
   {
     title: "Protecting health data at UK Biobank",
     authors: "Rocher, L., & Morley, J.",
