@@ -33,10 +33,10 @@ const BROADCAST_PODCASTS: {
 }[] = [
     {
     title: "Code for We, not for Me",
-    outlet: "Broadcast",
+    outlet: "Webinar",
     date: "July 2026",
     url: "https://youtu.be/Zmj_G2isV4A?si=bXM2mF9swiCKAtHA",
-    type: "Broadcast",
+    type: "broadcast",
   },  
   {
     title: "The HSJ Download Podcast: Who is responsible when AI goes wrong?",
