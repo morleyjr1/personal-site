@@ -31,6 +31,20 @@ const BROADCAST_PODCASTS: {
   url: string;
   type: MediaType;
 }[] = [
+    {
+    title: "Code for We, not for Me",
+    outlet: "Broadcast",
+    date: "July 2026",
+    url: "https://youtu.be/Zmj_G2isV4A?si=bXM2mF9swiCKAtHA",
+    type: "Broadcast",
+  },  
+  {
+    title: "The HSJ Download Podcast: Who is responsible when AI goes wrong?",
+    outlet: "Podcast",
+    date: "July 2026",
+    url: "https://www.hsj.co.uk/hsj-download-podcast/the-hsj-download-podcast-who-is-responsible-when-ai-goes-wrong/8123779.article?mkt_tok=NTI1LVNIQS0zNTUAAAGi1k-LnjEF9DuhwoZ7Jg-8BXkhdRfIG-35oMZjoNQE_qBh9yXBRf7fO8W6e94bNnWcavP0Mgz2xOQDBQqhlRp2G_2t-J1yMMjSthuVc-sY8g",
+    type: "podcast",
+  },  
   {
     title: "The Faces of Digital Health",
     outlet: "Podcast",
